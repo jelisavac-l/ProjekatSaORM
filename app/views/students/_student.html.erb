@@ -1,0 +1,17 @@
+<tr>
+    <td><%= student.first_name %></td>
+    <td><%= student.last_name %></td>
+    <td><%= student.index %></td>
+    <td><%= student.email %></td>
+    <td><%= student.program %></td>
+    <td>
+      <% if student.budget %>
+      <span class="fw-bold" style="color: green;">DA</span>
+      <% else %>
+      <span class="fw-bold" style="color: red;">NE</span>
+      <% end%>
+    </td>
+    <td>
+      <%= link_to "Prikaži", student%>
+    </td>
+</tr>

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="container">
+    <p style="color: green"><%= notice %></p>
+
+    <h1>Studenti</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Ime</th>
+          <th scope="col">Prezime</th>
+          <th scope="col">Indeks</th>
+          <th scope="col">Kontakt</th>
+          <th scope="col">Studijski program</th>
+          <th scope="col">Budžet</th>
+          <th scope="col">Kontrole</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+          <% @students.each do |student| %>
+          <%= render student %>
+          
+          <% end %>
+      </tbody>
+    </table>
+    
+    <div class="text-center">
+      <%= link_to "Dodaj novog studenta", new_student_path, class:"btn btn-success fs-5" %>
+    </div>
+  </div>
+</div>

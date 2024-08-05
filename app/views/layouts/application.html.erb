@@ -9,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body>
-    <%= render 'header'%>
+    <%= render 'home/header'%>
     <%= yield %>
-    <%= render 'footer'%>
+    <%= render 'home/footer'%>
   </body>
 </html>

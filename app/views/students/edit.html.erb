@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="container mt-3">
+    <h1>Izmena studenta</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+            <%= render "form", student: @student %>
+      </div>
+      <div class="col-md-6 rounded-5 mt-3 pt-5 text-white text-center shadow-lg" style="background-color: #E0115F;">
+        <h1 class="fw-bolder">Lorem ipsum?</h1>
+        <p>Iscrpeo sam svu svoju dizajnersku energiju, tako da neka ovde stoji jedna strofa koja oslikava moju trenutnu finansijsko-socijalnu situaciju:</p>
+        <p class="mt-5"><i>"Nemam para druže, a nemam ni sreće; sudbina me vara, neće me pa neće."</i></p>
+        <p class="mb-5">M. Brzaković - Brzi</p>
+        <%= link_to "Povratak na studente :)", students_path, class:"btn btn-light" %>
+      </div>
+    </div>
+
+
+
+    <br>
+
+    
+  </div>
+</div>
+
+

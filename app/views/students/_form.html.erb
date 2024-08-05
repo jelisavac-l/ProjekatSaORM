@@ -1,0 +1,31 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <form>
+      <%= form.label :first_name, "Ime", class:"col-form-label"%>
+      <%= form.text_field :first_name, class:"form-control", placeholder:"Unesite ime..."%>
+      <%= form.label :last_name, "Prezime", class:"col-form-label" %>
+      <%= form.text_field :last_name, class:"form-control", placeholder:"Unesite prezime..." %>
+      <%= form.label :index, "Broj indeksa", class:"col-form-label" %>
+      <%= form.text_field :index, class:"form-control", placeholder:"Unesite broj indeksa..." %>
+      <%= form.label :email, class:"col-form-label" %>
+      <%= form.text_field :email, class:"form-control", placeholder:"Unesite email..." %>
+      <%= form.label :program, "Studijski program", class:"col-form-label" %>
+      <%= form.text_field :program, class:"form-control", placeholder:"Unesite studijski program..." %>
+      <%= form.label :budget, "Finansiranje na teret budžeta ", class:"form-check-label my-2" %>
+      <%= form.check_box :budget, class:"form-check-input mt-2" %><br>
+      <%= form.submit "Potvrdi", class:"btn btn-success" %>
+    </form>
+
+
+<% end %>
